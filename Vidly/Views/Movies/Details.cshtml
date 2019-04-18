@@ -1,0 +1,14 @@
+﻿@model List<Vidly.Models.Movie>
+
+@{
+    ViewBag.Title = "Vidly";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>@Model[0].Name</h2>
+<ul>
+    <li>Genre: @Model[0].Genre</li>
+    <li>Release Date: @Model[0].ReleaseDate.Value.ToShortDateString()</li>
+    <li>Date Added: @Model[0].DateAdded.Value.ToShortDateString()</li>
+    <li>Number in Stock: @Model[0].StockAmount</li>
+</ul>
